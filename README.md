@@ -6,7 +6,7 @@
 
 This app will grab all the headlines from the Guardian newspaper API and display them on a page.  Clicking on a headline will show a summary of the article.
 
-### Technologies
+## Technologies
 
 This is a single page web app.  The code is written in frontend JavaScript (vanilla), CSS and HTML, and pulls data from two APIs.  
 
@@ -73,7 +73,7 @@ Two APIs are used in this challenge.
 
 ### Guardian API
 
-If you wanted to get the content of an article from the Guardian API, this is the cURL request you might make.  Notice how it has a query parameter for `api-key`.
+The API is used to extract content of a number of articles from the Guardian.  This is the cURL request.  Notice how it has a query parameter for `api-key`.
 
 ```
 curl "http://content.guardianapis.com/politics/blog/2014/feb/17/alex-salmond-speech-first-minister-scottish-independence-eu-currency-live?show-fields=body&api-key=SECRET_API_KEY"
@@ -89,7 +89,7 @@ Note how the `apiRequestUrl` parameter value is just the request you would have 
 
 ### Alyien text summarisation API
 
-This is the cURL request you might make to use the Aylien API to summarise an article by Bret Victor.  Notice how it has headers to authenticate with the Aylien API.
+The Aylien API is used to summarise articles from any full text included in a URL directed to it. This is the cURL request.  Notice how it has headers to authenticate with the Aylien API.
 
 ```
 curl "https://api.aylien.com/api/v1/summarize?url=http://worrydream.com/MediaForThinkingTheUnthinkable/note.html" \
@@ -109,6 +109,7 @@ Note how the `apiRequestUrl` parameter is just the request one would have made t
 
 ```
 git clone https://github.com/elizabethcsw/news-app.git
+cd news-app
 npm install
 http-server
 ```
